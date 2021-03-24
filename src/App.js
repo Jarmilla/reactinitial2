@@ -35,7 +35,13 @@ function App() {
             validation(e.target.value);
           }}
         />
-        <button onClick={() => getClients()} disabled={isClickable ? false : true}>
+        <button
+          onClick={() => {
+            setClients(null);
+            getClients();
+          }}
+          disabled={isClickable ? false : true}
+        >
           Search
         </button>
       </div>
